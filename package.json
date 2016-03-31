@@ -4,7 +4,9 @@
   "description": "PluralSight訓練實作",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc --project app/src --watch",
+    "start": "live-server app"
   },
   "keywords": ["Angular Material"],
   "author": "Alan Jui",
