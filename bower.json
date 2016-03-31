@@ -1,0 +1,21 @@
+{
+  "name": "ng-md-fundamentals",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alan Jui <alanjui.1960@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.0.6"
+  }
+}
