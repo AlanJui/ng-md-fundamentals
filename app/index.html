@@ -18,10 +18,22 @@
     </style>
   </head>
   
-  <body ng-cloak ng-controller="mainController as vm">
-    <h1>Hello Material!</h1>
+  <body ng-controller="mainController as vm"
+        layout="row">
     
-    {{vm.message}}
+    <div flex="30" style="background-color: #009688">
+      Sidenav
+    </div>
+    
+    <div layout="column" flex>
+      <div style="background-color: #3949ab">
+        Toolbar
+      </div>
+      
+      <md-content flex>
+        Main Content
+      </md-content>
+    </div>
     
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
