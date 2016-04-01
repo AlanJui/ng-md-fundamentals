@@ -6,9 +6,12 @@ namespace ContactManagerApp {
     users: User[] = [];
     message: string = 'Hello from our MainController';
     
-    static $inject = ['userService'];
+    static $inject = ['userService', '$mdSidenav'];
     
-    constructor(private userService: IUserService) {
+    constructor(
+      private userService: IUserService,
+      private $mdSidenav: angular.material.ISidenavService
+    ) {
       let self = this;
       
       userService.loadAllUsers()
@@ -16,6 +19,10 @@ namespace ContactManagerApp {
           self.users = users;
           console.log(self.users);  
         });
+    }
+    
+    toggleSideNav(): void {
+      this.$mdSidenav('left').toggle();
     }
   }
   

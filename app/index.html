@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic">
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
-    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css">
     <link rel="stylesheet" href="./assets/app.css">
     
     <style type="text/css">
@@ -21,16 +21,12 @@
   <body ng-controller="mainController as vm"
         layout="row">
     
-    <div flex="30" style="background-color: #009688">
-      Sidenav
-    </div>
+    <div ng-include="'./dist/views/side-nav.tpl.html'" layout="vertical"></div>
     
     <div layout="column" flex>
-      <div style="background-color: #3949ab">
-        Toolbar
-      </div>
+      <div ng-include="'./dist/views/toolbar-header.tpl.html'"></div>
       
-      <md-content flex>
+      <md-content flex id="content">
         Main Content
       </md-content>
     </div>
@@ -39,6 +35,7 @@
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
     <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/angular-material-icons/angular-material-icons.js"></script>
     
     <script src="./dist/services/userService.js"></script>
     <script src="./dist/controllers/mainController.js"></script>
