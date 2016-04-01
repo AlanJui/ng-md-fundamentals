@@ -3,12 +3,19 @@
 namespace ContactManagerApp {
   
   export class MainController {
-
+    users: User[] = [];
     message: string = 'Hello from our MainController';
     
-    static $inject = [];
+    static $inject = ['userService'];
     
-    constructor() {
+    constructor(private userService: IUserService) {
+      let self = this;
+      
+      userService.loadAllUsers()
+        .then((users: User[]) => {
+          self.users = users;
+          console.log(self.users);  
+        });
     }
   }
   

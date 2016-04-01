@@ -2,6 +2,14 @@
   "compilerOptions": {
     "target": "es5",
     "sourceMap": true,
-    "outDir": "../dist/"
-  }
+    "outDir": "../dist/",
+    "watch": true,
+    "noImplicitAny": false
+  },
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "lib",
+    "src/_all.ts"
+  ]
 }

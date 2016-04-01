@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc --project app/src --watch",
+    "dev": "tsc --project app/src",
     "start": "live-server app"
   },
-  "keywords": ["Angular Material"],
+  "keywords": [
+    "Angular Material"
+  ],
   "author": "Alan Jui",
   "license": "ISC",
   "dependencies": {},
