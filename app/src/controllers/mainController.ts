@@ -9,11 +9,16 @@ namespace ContactManagerApp {
     tabIndex: number = 0;
     message: string = 'Hello from our MainController';
     
-    static $inject = ['userService', '$mdSidenav'];
+    static $inject = [
+      'userService', 
+      '$mdSidenav',
+      '$mdToast'
+    ];
     
     constructor(
       private userService: IUserService,
-      private $mdSidenav: angular.material.ISidenavService
+      private $mdSidenav: angular.material.ISidenavService,
+      private $mdToast: angular.material.IToastService
     ) {
       let self = this;
       
@@ -42,6 +47,17 @@ namespace ContactManagerApp {
     removeNote(note: Note): void {
       let foundIndex = this.selectedUser.notes.indexOf(note);
       this.selectedUser.notes.splice(foundIndex, 1);
+      
+      this.openToast('Note has been removed!');
+    }
+    
+    openToast(message: string): void {
+      this.$mdToast.show(
+        this.$mdToast.simple()
+          .position('top right')
+          .textContent(message)
+          .hideDelay(3000)
+      );
     }
   }
   
