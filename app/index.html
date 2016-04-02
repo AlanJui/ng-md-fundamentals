@@ -21,13 +21,13 @@
   <body ng-controller="mainController as vm"
         layout="row">
     
-    <div ng-include="'./dist/views/side-nav.tpl.html'" layout="vertical"></div>
+    <div ng-include="'./views/side-nav.tpl.html'" layout="vertical"></div>
     
     <div layout="column" flex>
-      <div ng-include="'./dist/views/toolbar-header.tpl.html'"></div>
+      <div ng-include="'./views/toolbar-header.tpl.html'"></div>
       
       <md-content flex id="content">
-        Main Content
+        <div ng-include="'./views/main-content.tpl.html'"></div>
       </md-content>
     </div>
     
