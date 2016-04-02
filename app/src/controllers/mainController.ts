@@ -38,6 +38,11 @@ namespace ContactManagerApp {
       
       this.tabIndex = 0;
     }
+    
+    removeNote(note: Note): void {
+      let foundIndex = this.selectedUser.notes.indexOf(note);
+      this.selectedUser.notes.splice(foundIndex, 1);
+    }
   }
   
 }

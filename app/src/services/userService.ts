@@ -85,16 +85,7 @@ namespace ContactManagerApp {
         name: 'Ernesto Urbina',
         avatar: 'svg-5',
         bio: 'Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo.',
-        notes: [
-          {
-            title: 'Pay back dinner',
-            date: new Date('2016-01-12')
-          },
-          {
-            title: 'Buy flowers for birthday',
-            date: new Date('2016-01-19')
-          }
-        ]
+        notes: []
       },
       {
         name: 'Gani Ferrer',

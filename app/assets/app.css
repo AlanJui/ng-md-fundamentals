@@ -58,9 +58,9 @@ md-toolbar .md-toolbar-tools h1 {
   overflow: hidden;
   margin: 0px;
   vertical-align: middle;
-  /*zoom: 0.70;*/
+  /*zoom: 0.70;
   transform: translateZ(0);
   -webkit-transform: scale(0.70);
-  -moz-transform: scale(0.70);
+  -moz-transform: scale(0.70);*/
 }
 
