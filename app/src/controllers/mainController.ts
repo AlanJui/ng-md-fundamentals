@@ -6,6 +6,7 @@ namespace ContactManagerApp {
     users: User[] = [];
     selectedUser: User = null;
     searchText: string = '';
+    tabIndex: number = 0;
     message: string = 'Hello from our MainController';
     
     static $inject = ['userService', '$mdSidenav'];
@@ -34,6 +35,8 @@ namespace ContactManagerApp {
       if (this.$mdSidenav('left').isOpen()) {
         this.$mdSidenav('left').close();
       }
+      
+      this.tabIndex = 0;
     }
   }
   

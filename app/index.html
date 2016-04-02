@@ -28,6 +28,21 @@
       
       <md-content flex id="content">
         <div ng-include="'./views/main-content.tpl.html'"></div>
+        
+        <md-tabs md-selected="vm.tabIndex"
+                 md-dynamic-height=""
+                 md-stretch-tabs="always">
+          <md-tab label="Bio" >
+            <md-content>
+              <div ng-include="'./views/tab-bio.tpl.html'"></div>
+            </md-content>
+          </md-tab>
+          <md-tab label="Notes" >
+            <md-content>
+              <div ng-include="'./views/tab-notes.tpl.html'"></div>
+            </md-content>
+          </md-tab>
+        </md-tabs>
       </md-content>
     </div>
     
