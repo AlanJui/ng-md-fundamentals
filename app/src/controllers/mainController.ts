@@ -8,7 +8,7 @@ namespace ContactManagerApp {
     searchText: string = '';
     tabIndex: number = 0;
     mdFabSpeedDialIsOpen = true;
-    message: string = 'Hello from our MainController';
+    newNote: Note = new Note('', new Date());
     
     static $inject = [
       'userService', 
@@ -93,6 +93,23 @@ namespace ContactManagerApp {
         }, () => {
           console.log('You cancelled the dialog.');
         });
+    }
+    
+    formScope: any;
+    
+    setFormScope(scope): void {
+      this.formScope = scope;
+    }
+    
+    addNote(): void {
+      this.selectedUser.notes.push(this.newNote);
+      
+      // reset the form
+      this.formScope.newNoteForm.$setUntouched();
+      this.formScope.newNoteForm.$setPristine();
+      
+      this.newNote = new Note('', new Date());
+      this.openToast('A new note added!');
     }
     
     removeNote(note: Note): void {

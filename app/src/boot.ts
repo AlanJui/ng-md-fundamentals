@@ -5,7 +5,11 @@ namespace ContactManagerApp {
   const URL_ICON_MENU = './assets/svg/menu.svg';
   const URL_ICON_SHARE = './assets/svg/share.svg';
   
-  angular.module('contactManagerApp', ['ngMaterial', 'ngMdIcons'])
+  angular.module('contactManagerApp', [
+    'ngMaterial', 
+    'ngMdIcons',
+    'ngMessages'
+  ])
     .service('userService', UserService)
     
     .controller('mainController', MainController)
