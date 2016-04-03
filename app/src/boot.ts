@@ -10,6 +10,8 @@ namespace ContactManagerApp {
     
     .controller('mainController', MainController)
     
+    .controller('addUserDialogController', AddUserDialogController)
+    
     .config(($mdThemingProvider: angular.material.IThemingProvider) => {
       $mdThemingProvider.theme('default')         
         .primaryPalette('blue')
@@ -19,8 +21,14 @@ namespace ContactManagerApp {
     .config(($mdIconProvider: angular.material.IIconProvider) => {
       $mdIconProvider
         .defaultIconSet(URL_AVATAR_ICONS, 128)
+        
         .icon('menu', URL_ICON_MENU, 24)
-        .icon('share', URL_ICON_SHARE, 24);
+        .icon('share', URL_ICON_SHARE, 24)
+        
+        .icon('phone', './assets/svg/phone.svg', 512)
+        .icon('google_plus', './assets/svg/google_plus.svg', 512)
+        .icon('hangouts', './assets/svg/hangouts.svg', 512)
+        .icon('twitter', './assets/svg/twitter.svg', 512);
     });
 
 }

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css">
     <link rel="stylesheet" href="./assets/app.css">
     
+    <!-- 防止顯示 {{xxx}} 內容 -->
     <style type="text/css">
       [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
         display: none !important;
@@ -21,22 +22,33 @@
   <body ng-controller="mainController as vm"
         layout="row">
     
+    <!-- 側端折疊面板 -->
     <div ng-include="'./views/side-nav.tpl.html'" layout="vertical"></div>
     
-    <div layout="column" flex>
+    <!-- App 主體面板 -->
+    <div layout="column" flex id="wrapper" >
+      
+      <!-- 功能選擇面板 -->
       <div ng-include="'./views/toolbar-header.tpl.html'"></div>
       
+      <!-- 內容顯示面板 -->
       <md-content flex id="content">
-        <div ng-include="'./views/main-content.tpl.html'"></div>
         
+        <div ng-include="'./views/main-content.tpl.html'"></div>
+
+        <!-- 頁籤群組 -->
         <md-tabs md-selected="vm.tabIndex"
                  md-dynamic-height=""
                  md-stretch-tabs="always">
+          
+          <!-- BIO 頁籤 -->
           <md-tab label="Bio" >
             <md-content>
               <div ng-include="'./views/tab-bio.tpl.html'"></div>
             </md-content>
           </md-tab>
+          
+          <!-- Notes 頁籤 -->
           <md-tab label="Notes" >
             <md-content>
               <div ng-include="'./views/tab-notes.tpl.html'"></div>
@@ -52,7 +64,10 @@
     <script src="./bower_components/angular-material/angular-material.js"></script>
     <script src="./bower_components/angular-material-icons/angular-material-icons.js"></script>
     
+    <script src="./dist/models.js"></script>
     <script src="./dist/services/userService.js"></script>
+    <script src="./dist/controllers/addUserDialogController.js"></script>
+    <script src="./dist/controllers/contactPanelController.js"></script>
     <script src="./dist/controllers/mainController.js"></script>
     <script src="./dist/boot.js"></script>
   </body>
