@@ -1,0 +1,46 @@
+<md-dialog>
+  <form name="newContactForm" ng-submit="ctrl.save()" >
+    <md-dialog-content>
+      <div layout="column" layout-padding>
+        <div layout-gt-sm="row" >
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Avatar</label>
+            <md-select ng-model="ctrl.newContact.avatar"
+                       name="avatar" >
+              <md-option ng-repeat="avatar in ctrl.avatars"
+                         ng-value="avatar">
+                <md-icon md-svg-icon="{{avatar}}"></md-icon>
+              </md-option>  
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>First Name</label>
+            <input ng-model="ctrl.newContact.firstName" 
+                   name="firstName">
+          </md-input-container>          
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Last Name</label>
+            <input ng-model="ctrl.newContact.lastName" 
+                   name="lastName">
+          </md-input-container>          
+        </div>
+        <md-input-container class="md-block" flex>
+          <label>Biography</label>
+          <textarea ng-model="ctrl.newContact.bio" 
+                    name="bio"
+                    row="5">
+          </textarea>          
+        </md-input-container>                  
+      </div>
+    </md-dialog-content>
+    
+    <md-dialog-actions layout="row">
+      <md-button ng-click="ctrl.cancel()">
+        Cancel
+      </md-button>  
+      <md-button class="md-primary md-raised" type="submit">
+        Save
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

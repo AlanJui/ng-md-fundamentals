@@ -2,6 +2,7 @@
   <div class="md-toolbar-tools">
     <md-button hide-gt-sm
                class="md-icon-button"
+               aria-label="Open Left Side Menu"
                ng-click="vm.toggleSideNav()">
       <md-icon md-svg-icon="menu"></md-icon> 
     </md-button>
@@ -9,22 +10,22 @@
       Contact Manager
     </h1>
     <md-fab-speed-dial md-direction="down"
-                       class="md-fling md-fab-top-right" >
+                       class="md-fling md-fab-top-right">
       <md-fab-trigger>
-        <md-button class="md-fab">
+        <md-button aria-label="menu" class="md-fab md-warn">
           <md-icon md-svg-icon="menu" ></md-icon>
         </md-button>
       </md-fab-trigger>
       
       <md-fab-actions>
-        <md-button aria-label="Contact"
-                   class="md-fab md-raised md-mini"
+        <md-button class="md-fab md-raised md-mini"
+                   aria-label="Make a contact"
                    ng-click="vm.showContactOptions($event)">
           <ng-md-icon icon="face" aria-label="Contact"></ng-md-icon>  
           <md-tooltip md-direction="left" >Contact</md-tooltip>
         </md-button>
-        <md-button aria-label="Clear"
-                   class="md-fab md-raised md-mini"
+        <md-button class="md-fab md-raised md-mini"
+                   aria-label="Clear all notes"
                    ng-click="vm.clearNotes($event)">
           <ng-md-icon icon="clear_all" aria-label="Clear"></ng-md-icon>
           <md-tooltip md-direction="left" >Clear all notes</md-tooltip>

@@ -73,21 +73,23 @@ namespace ContactManagerApp {
     }
     
     // 使用者可自側欄的「新增」按鈕，添加新的「聯絡人」
-    addUser($event): void {
+    addContact($event): void {
       let self= this;
       let useFullScreen = (this.$mdMedia('sm') || this.$mdMedia('xs')); 
       
       this.$mdDialog.show({
-        templateUrl: './views/newUserDialog.tpl.html',
+        templateUrl: './views/newContactDialog.tpl.html',
         parent: angular.element(document.body),
         targetEvent: $event,
-        controller: AddUserDialogController,
+        controller: AddContactDialogController,
         controllerAs: 'ctrl',
         clickOutsideToClose: true,
         fullscreen: useFullScreen
       })
-        .then((user: User) => {
-          self.openToast('user added');
+        .then((newContact: Contact) => {
+          let newUser: User = User.createContact(newContact);
+          self.users.push(newUser);
+          self.openToast('New contact added');
         }, () => {
           console.log('You cancelled the dialog.');
         });

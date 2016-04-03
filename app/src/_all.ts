@@ -6,5 +6,5 @@
 /// <reference path="./services/userService.ts" />
 
 /// <reference path="./controllers/mainController.ts" />
-/// <reference path="./controllers/addUserDialogController.ts" />
+/// <reference path="./controllers/addContactDialogController.ts" />
 /// <reference path="./controllers/contactPanelController.ts" />

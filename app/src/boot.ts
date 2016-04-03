@@ -10,8 +10,6 @@ namespace ContactManagerApp {
     
     .controller('mainController', MainController)
     
-    .controller('addUserDialogController', AddUserDialogController)
-    
     .config(($mdThemingProvider: angular.material.IThemingProvider) => {
       $mdThemingProvider.theme('default')         
         .primaryPalette('blue')
